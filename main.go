@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os/user"
 
-	"github.com/alyu/configparser"
+	"github.com/gczn/configparser"
 	survey "gopkg.in/AlecAivazis/survey.v1"
 )
 
@@ -95,6 +95,7 @@ func main() {
 		log.Fatal(err)
 	}
 
+	configparser.Delimiter = " = "
 	credentialsFile := fmt.Sprintf("%s/.aws/credentials", usr.HomeDir)
 	config, err := configparser.Read(credentialsFile)
 	if err != nil {
