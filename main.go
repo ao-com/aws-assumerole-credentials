@@ -80,6 +80,7 @@ func main() {
 
 	fmt.Printf("Access key: %s\n", *creds.AccessKeyId)
 	fmt.Printf("Secret key: %s\n", *creds.SecretAccessKey)
+	fmt.Printf("Session token: %s\n", *creds.SessionToken)
 
 	writeToFile := false
 	prompt := &survey.Confirm{
@@ -114,6 +115,7 @@ func main() {
 
 	section.Add("aws_access_key_id", *creds.AccessKeyId)
 	section.Add("aws_secret_access_key", *creds.SecretAccessKey)
+	section.Add("aws_session_token", *creds.SessionToken)
 
 	err = configparser.Save(config, credentialsFile)
 	if err != nil {
