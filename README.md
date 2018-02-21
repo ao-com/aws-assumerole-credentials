@@ -20,7 +20,7 @@ go build
 
 #### Usage
 
-Once the app is running you will be presented with a prompt for your AD credentials, these can be entered in either <domain>\<samaccountname> or as a UPN, assuming you have this setup in your directory (i.e. email address). The password field is masked with asterisks.
+Once the app is running you will be presented with a prompt for your AD credentials, these can be entered in either <domain>\\<samaccountname> or UPN format, assuming you have this setup in your directory (i.e. email address). The password field is masked with asterisks.
 
 ![Login](./images/login.png)
 
@@ -32,7 +32,7 @@ This will return the access key, secret key and session token for the role you h
 
 ![Write Credentials](./images/write-credentials.png)
 
-If you select yes to the yes you will be asked which profile you wish to write the credentials to. If the profile does not already exist it will be created. If it does exist the existing credentials will be over written.
+If you select yes to the prompt you will be asked which profile you wish to write the credentials to. If the profile does not already exist it will be created. If it does exist the existing credentials will be overwritten.
 
 ![Write to credentials file](./images/write-to-credentials-file.png)
 
